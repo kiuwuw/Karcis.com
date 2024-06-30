@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>😎Karcis.com</title>
+    <title>TIKETOPIA.COM</title>
+    <link
+            rel="icon"
+            href=
+"plane.png"
+            type="image/x-icon"
+        />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="slide.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="popUP.css">
     <style>
 
     </style>
@@ -94,8 +101,13 @@
         <div class="relative flex flex-col" >
 
             <div class="flex flex-row items-center justify-between menu" style="background-color : white ">
-                <a href="index.html">
-                    <img  src="logo/Asset 1.svg" style="height : 50px" alt="Karcis.">
+                <a href="index.html" style="font-size:xx-large;display:flex;font-weight:bolder">
+                    <div style="display:flex;flex-direction:row;font-weight:bold">
+                        <p style="color: #0064d2;">TIKET </p>
+                        <p style="color: #2f2f2f;">OPIA </p>
+                        <p style="color: #fede00;" > . </p>
+
+                    </div>
                 </a>
                 <!-- <div class="flex logo" style="font-size: xx-large; color : #0064d2;">
                     <span>K</span>
@@ -205,9 +217,20 @@
                     <div class="flex flex-col items-end gap-4 beli">
                         <p class="font-bold" style="font-size: 15px ; color : gray" >Mulai Dari</p>
                         <p class="font-bold" style="font-size: 20px ; color : red" >IDR 513.000</p>
-                        <a href="Register.html" class="rounded " style="background-color: #0064d2 ; padding  :7px 15px ; color : #f7f7f7; font-weight:bold">
+                        <button onclick="showPopup()"class="rounded " style="background-color: #0064d2 ; padding  :7px 15px ; color : #f7f7f7; font-weight:bold">
                             Pesan
-                        </a>
+                        </button>
+                    
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                          <div class="modal-content" style="display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <div class="message">
+                              <i class="fas fa-check-circle fa-2x"></i>
+                              <p>Tiket Berhasil dipesan</p>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
                 <div style="width: 100%;height:10px;background-color: aliceblue;"></div>
@@ -303,7 +326,7 @@
             
 
         <footer class="flex flex-col items-center justify-center">
-            <p>© 2023 Karcis.com Tiket Network . All Rights Reserved.</p>
+            <p>© 2024 Tiketopia.com Tiket Network . All Rights Reserved.</p>
         </footer>  
     
     </div>
@@ -313,6 +336,23 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        function showPopup() {
+          document.getElementById("myModal").style.display = "block";
+        }
+  
+        function closePopup() {
+          document.getElementById("myModal").style.display = "none";
+        }
+  
+        window.onclick = function (event) {
+          if (event.target == document.getElementById("myModal")) {
+            closePopup();
+          }
+        };
+      </script>
+
 
     <!-- Initialize Swiper -->
     <script>
